@@ -5,5 +5,4 @@ const assertEqual = function(actual, expected) {
     console.log(String.fromCodePoint(0x274C) + `Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(10, 1);
+module.exports = assertEqual;
