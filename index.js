@@ -3,7 +3,6 @@ const tail   = require('./tail');
 const middle = require('./middle');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle
-};
+  head,
+  tail,
+  middle};
