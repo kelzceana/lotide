@@ -1,22 +1,5 @@
-const eqArrays = function(arr1, arr2) {
-  let trueOrFalse = '';
-  if (arr1.length !== arr2.length) {
-    trueOrFalse = false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      trueOrFalse = true;
-    } else trueOrFalse = false;
-  }
-  return trueOrFalse;
-};
-const assertArraysEqual = function(array1, array2) {
-  if (eqArrays(array1, array2)) {
-    console.log(String.fromCodePoint(0x2705) + `Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(String.fromCodePoint(0x274C) + `Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 const middle = function(array) {
   const arrayLength = array.length;
   let newArr = [];
@@ -32,12 +15,7 @@ const middle = function(array) {
   }
   return newArr;
 };
-console.log(middle([1, 2, 3, 4, 5]));
-console.log(middle([1, 2, 3, 4]));
-console.log(middle([1]));
-console.log(middle([1, 2]));
-console.log(middle([1, 2, 3, 4, 5, 6]));
-console.log(middle([1, 2, 3]));
+module.exports = middle
 /**
  * check if input is an array. if its an array proceed to the next step
  * get the length of the array
